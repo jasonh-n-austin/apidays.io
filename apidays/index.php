@@ -22,8 +22,22 @@
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/styles.css?v=1.0">
 	<link href="css/fonz.css" type="text/css" rel="stylesheet"></style>
-
-
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="http://api.webshell.io/sdk/js?key=6f625a03162816120b70a4a63585c871"></script>
+	<script type="text/javascript">
+	$('document').ready(function() {
+		wsh.exec({
+			code: function() {
+				var m = apis.google.maps();
+				m.center('san francisco');
+				m.zoom(12);
+			},
+			process: function(data,meta) {
+				$('#gmaps').html(meta.view);
+			}
+		})
+	})
+	</script>
 	<!-- Remove the script reference below if you're using Modernizr -->
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -42,7 +56,6 @@
 				<nav class="navigation">
 					<ul class="nav_p" id="nav">
 						<li data-color="#e6e6e6" class="current"><a href="#home">home</a></li>
-						<li data-color="#fff"><a href="#program">PROGRAM</a></li>
 						<li data-color="#e6e6e6"><a href="#speakers">SPEAKERS</a></li>
 						<li><a href="http://fr.amiando.com/apidays.html" class="external" target="_blank">REGISTER</a></li>
 						<li data-color="#fff"><a href="#organizers">ORGANIZERS</a></li>
@@ -74,52 +87,40 @@
 							<div class="fb-like" data-send="false" data-href="http://apidays.io" data-layout="button_count" data-width="450" data-show-faces="false"></div>
 
 						</div><!-- fin socials -->
-						<div class='poweredby'>
-								<br/><br/><img src="images/powered_by.png" alt="powered by" />
-						</div>
+
 						
 					</div><!-- fin sleft -->
 					
 					<div class="main">
 						<div class="pad">
-							<h1>The Web 1.0 was readable, the Web 2.0 was social, <br />
-							<span class="be">now the web is programmable</span>
-							<span class="te">trough <span class="colr">a</span>pplication <span class="colr">p</span>rogramming <span class="colr">i</span>nterfaces,</span>
-							<span class="ne">aka APIs.</span></h1>
+							<h1>
+							<span class="be">API economy</span>
+							<span class="te">The Giant has awaken.</span></h1>
 						</div><!-- fin content -->
 						
 						<div class="hr"></div>
 						
 						<div class="pad">
-							<h2>DECEMBER 3, 2012 > DECEMBER 4, 2012  - Paris, @EPITA Porte d'Italie
-							<span>The First International event on APIs in Europe</span></h2>
+							<h2>JUNE 21, 2013 > JUNE 22, 2013  - San Francisco, @Parisoma
 						</div><!-- fin pad -->
 						
 						<div class="hr"></div>
 						
-						<div class="pad groupeButton">
-							<!--<a target='_blank' href="http://fr.amiando.com/apidays.html" alt="Register" class="button register">Register</a>-->
-						
-							&nbsp;<a target='_blank' href="http://youtube.com/apidays?" alt="videos APIdays 2012 " class="button videos">APidays 2012 in videos</a>
-							<!--<img src='css/img/keynote_closed.png'/>-->
-							
-							
-							<div class="clear"></div>
-						</div><!-- fin pad -->
-						
-						<div class="hr"></div>
 						
 						<div class="pad">
-							<p>Web APIs are a unique opprtunity for companies, governments and developers to either better organize the governance of their IT into a scalable  and flexible model, either leverage a complete ecosystem around the organization, exchanging data through the web for trillion of applications on billion devices.</p>
-							
-							<p class="p2">Because each civilization has been described by the way it communicates and make exchanges, API are the beginning of a programmable civilization.</p>
+							<p>Since many years, we have more and more APIs coming up, making the glue of web. The promise of the programmable web is becoming true.</p>
+							<p>Since these last weeks, the API economy have seen multiple acquistions and fundraising, making the API ecosystem hot.</p>
+							<p>APIdays San Francisco will gather the API community members and API business actors to talk and exchange visions with the best speakers and companies making the API driven society happen. <br />
+								The aim is to understand with the best experts why we are changing from a multi-million to a multi-billion market opportunity.</p>
+							<p>It will be the 21st and 22nd of June, @Parisoma co-working space, San Francisco. The APIdays conference will be followed by an APIhackday the 23th.</p>
+							<p class="p2">"The fate of the web has never been owed by so many to so few"</p>
 						</div><!-- fin pad -->
 					
 					</div><!-- fin main -->
 					<div class="clear"></div>
 				</div><!-- fin inside -->
 			</section><!-- fin section -->
-			<?php if (1) {
+			<?php if (0) {
 				$salleA = "<b>Room A : </b>";
 				$salleB = "<b>Room B : </b>";
 				$slotMediaSocial = "Towards an APIzation of media? French editors debate with Social Media Club France";
@@ -439,13 +440,14 @@
 									<span class="society">LAYER7</span>
 								</div>
 							</li>
+							<!--
 							<li><img src="images/speakers/speaker_steve_klabnik.jpeg" alt="Steve Klabnik" />
 								<div class="desc">
 									<h4 class="name"><a target='_blank' href='http://twitter.com/steveklabnik'><span class="colr">Steve Klabnik</span></a></h4>
 									<span class="job">Ruby Hero</span>
 									<span class="society">@steveklabnik</span>
 								</div>
-							</li>
+							</li>-->
 						<!--	<li><img src="images/speakers/speaker_layer7_francois.jpg" alt="Francois Lascelles" />
 								<div class="desc">
 									<h4 class="name"><a target='_blank' href='http://www.linkedin.com/profile/view?id=12942855'><span class="colr">Francois Lascelles</span></a></h4>
@@ -453,6 +455,7 @@
 									<span class="society">LAYER7</span>
 								</div>
 							</li>-->
+							<!--
 								<li><img src="images/speakers/speaker_ronnie_metra.jpeg" alt="Ronnie Metra" />
 								<div class="desc">
 									<h4 class="name">Ronnie Mitra</h4>
@@ -467,21 +470,21 @@
 									<span class="society">Startup Weekend</span>
 								</div>
 							</li>
-							</li>
+							</li>-->
 							<li><img src="images/speakers/speaker_3scale.png" alt="guillaume balas" />
 								<div class="desc">
 									<h4 class="name"><a target='_blank' href='http://www.linkedin.com/profile/view?id=1554452'><span class="colr">Guillaume Balas</span></a></h4>
 									<span class="job">CMO</span>
 									<span class="society">3scale</span>
 								</div>
-							</li>
+							</li><!--
 							<li><img src="images/speakers/speaker_fabernovel.jpeg" alt="Stéphane Distinguin" />
 								<div class="desc">
 									<h4 class="name"><a target='_blank' href='http://twitter.com/fano'><span class="colr">Stéphane Distinguin</span></a></h4>
 									<span class="job">CEO</span>
 									<span class="society">faberNovel</span>
 								</div>
-							</li>
+							</li>-->
 							
 							<li><img src="images/speakers/speaker_mehdi_medjaoui.jpeg" alt="Mehdi Medjaoui" />
 								<div class="desc">
@@ -490,7 +493,7 @@
 									<span class="society">WEBSHELL</span>
 								</div>
 							</li>
-							
+							<!--
 							<li><img src="images/speakers/speaker_lemonde.jpeg" alt="Ismaël Héry" />
 								<div class="desc">
 									<h4 class="name"><a target='_blank' href='http://www.linkedin.com/profile/view?id=101539059'><span class="colr">Ismaël Héry</span></a></h4>
@@ -674,14 +677,14 @@
 										<span class="job">CTO</span>
 										<span class="society">af83</span>
 									</div>
-								</li>
+								</li>-->
 									<li><img src="images/speakers/speaker_SWIFT.jpg" alt="Swift" />
 									<div class="desc">
 										<h4 class="name"><a target='_blank' href='http://twitter.com/SwiftAlphaOne'><span class="colr">Swift</span></a></h4>
 										<span class="job">Developer Evangelist</span>
 										<span class="society">SendGrid</span>
 									</div>
-								</li>
+								</li><!--
 								<li><img src="images/speakers/speaker_Olivier_Laplace.jpg" alt="Olivier Laplace" />
 									<div class="desc">
 										<h4 class="name"><a target='_blank' href='http://www.linkedin.com/profile/view?id=9302066'><span class="colr">Olivier Laplace</span></a></h4>
@@ -689,7 +692,7 @@
 										<span class="society">SOA Software</span>
 									</div>
 								</li>
-								
+								-->
 								
 
 								
@@ -833,10 +836,9 @@ To learn more, please visit our web site and follow us on social networks:</p><a
 						<h2 class="rub ico_when">when and where ?</h2>
 						
 						<div class="address">
-							<h5>3 & 4 December, 2012<br />-<br />
-							Epita Kremlin-Bicêtre</h5>
-							<p>14-16 rue Voltaire<br />
-							94276 Kremlin Bicêtre Cedex</p>
+							<h5>21 & 22 June, 2013<br />-<br />
+							@Parisoma, San Francisco</h5>
+							<p></p>
 						</div><!-- fin adress -->
 						<div class="anyQ">
 							<h5>Any questions?</h5>
@@ -847,28 +849,11 @@ To learn more, please visit our web site and follow us on social networks:</p><a
 						<div class="clear"></div>
 					</div><!-- fin main -->
 					<div class="clear"></div>
-					<?php if ($_GET['do'] == 1) {?><br/>
-						<div id="map_canvas" style="width:995px; height:603px"></div> 
 
-					<?php } else {?>
-					<div class="map">
-					
-						<div class="marker marker1"><span class="tram"></span><span class="metro"></span>Porte d'italie</div><!-- fin marker -->
-						<div class="marker marker2"><span class="metro"></span>Porte de Choisy</div><!-- fin marker -->
-						<div class="marker marker3"><span class="bus"></span>Pierre Brossolette</div><!-- fin marker -->
-						<div class="marker marker4"><span class="bus"></span>Roger Salengro</div><!-- fin marker -->
-						
-						<div class="markerS">
-							<div class="int">
-								<h5>Epita Kremlin-Bicêtre</h5>
-								<p>14-16 rue Voltaire<br />
-								94276 Kremlin Bicêtre Cedex</p>
-							</div><!-- fin int -->
-						</div><!-- fin marker -->
-					
-					</div><!-- fin map -->
-					<?php } ?>
-					
+					<div id="gmaps">
+					</div>
+
+					<?php if (0): ?>
 					<div class="main">
 						<h2 class="rub ico_howto">How to get there?</h2>
 						
@@ -898,7 +883,7 @@ To learn more, please visit our web site and follow us on social networks:</p><a
 					
 						<div class="clear"></div>
 					</div><!-- fin main -->
-					
+					<?php endif; ?>
 				
 					<div class="clear"></div>
 				</div><!-- fin inside -->
