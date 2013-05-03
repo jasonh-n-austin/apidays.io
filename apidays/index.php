@@ -29,8 +29,9 @@
 		wsh.exec({
 			code: function() {
 				var m = apis.google.maps();
-				m.center('san francisco');
-				m.zoom(12);
+				m.center('169 11st, san francisco');
+				m.zoom(15);
+				m.addMarker({address: '169 11st, san francisco'})
 			},
 			process: function(data,meta) {
 				$('#gmaps').html(meta.view);
@@ -708,34 +709,7 @@
 			
 			</section><!-- fin section -->
 			<?php } ?>
-			
-			
-			<section class="section organizers" id="organizers">
-				<div class="inside fil">
-					<div class="pleft">
-						<img src="images/ico_section_organizers.png" alt="Organizers"  class="ico"/>
-					</div><!-- fin pleft -->
-					<div class="main">
-						<ul>
-							<li>
-								<div class="logo_organizers"><img src="images/logo_fabernovel.png" alt="Faber Novel" /></div>
-								<h3><a target='_blank' href="http://fabernovel.com/en/"><span class="colr">faberNovel</span></a> helps large organizations think and act like startups.</h3>
-								<p>faberNovel combines technology,design and emerging trends to invent new products, services, and experiences. Founded in 2003, faberNovel is based in Paris, San Francisco, New York and Moscow, has a team of 60 passionate people and works for large organizations such as : L'Oréal, Suez Environnement, Toys "R" Us, Danone, Essilor, bioMérieux, SNCF, France TV.</p>
-							</li>
-							<li class="last">
-								<div class="logo_organizers"><img src="images/logo_webshell.png" alt="Web Shell" /></div>
-								<h3>Webshell enables developers to easily make advanced web and mobile applications based on APIs. </h3>
-								<p><a target='_blank' href="http://webshell.io"><span class="colr">webshell</span></a> has developped a shell for the web that developers can use to combine APIs of the programmable web in minutes and really program the web. Webshell was created in 2012 by its team of 3 co-founders , in Paris, and manages the <a target='_blank' href="http://api500.com/"><span class="colr">API rating agency blog</span></a> and the <a target='_blank' href="http://apijoy.tumblr.com/"><span class="colr">{"apis":"the joy"} blog</span></a>.</p>
-							</li>
-						</ul>
-						<div class="clear"></div>
-					</div><!-- fin main -->
-					<div class="clear"></div>
-				</div><!-- fin inside -->
-			</section>
-			
-			
-			
+
 			
 			<section class="section partners" id="partners">
 				<div class="inside fil">
@@ -825,6 +799,33 @@ To learn more, please visit our web site and follow us on social networks:</p><a
 				</div><!-- fin inside -->
 			</section><!-- fin partenrs -->
 
+						
+			
+			<section class="section organizers" id="organizers">
+				<div class="inside fil">
+					<div class="pleft">
+						<img src="images/ico_section_organizers.png" alt="Organizers"  class="ico"/>
+					</div><!-- fin pleft -->
+					<div class="main">
+						<ul>
+							<li>
+								<div class="logo_organizers"><img src="images/logo_fabernovel.png" alt="Faber Novel" /></div>
+								<h3><a target='_blank' href="http://fabernovel.com/en/"><span class="colr">faberNovel</span></a> helps large organizations think and act like startups.</h3>
+								<p>faberNovel combines technology,design and emerging trends to invent new products, services, and experiences. Founded in 2003, faberNovel is based in Paris, San Francisco, New York and Moscow, has a team of 60 passionate people and works for large organizations such as : L'Oréal, Suez Environnement, Toys "R" Us, Danone, Essilor, bioMérieux, SNCF, France TV.</p>
+							</li>
+							<li class="last">
+								<div class="logo_organizers"><img src="images/logo_webshell.png" alt="Web Shell" /></div>
+								<h3>Webshell enables developers to easily make advanced web and mobile applications based on APIs. </h3>
+								<p><a target='_blank' href="http://webshell.io"><span class="colr">webshell</span></a> has developped a shell for the web that developers can use to combine APIs of the programmable web in minutes and really program the web. Webshell was created in 2012 by its team of 3 co-founders , in Paris, and manages the <a target='_blank' href="http://api500.com/"><span class="colr">API rating agency blog</span></a> and the <a target='_blank' href="http://apijoy.tumblr.com/"><span class="colr">{"apis":"the joy"} blog</span></a>.</p>
+							</li>
+						</ul>
+						<div class="clear"></div>
+					</div><!-- fin main -->
+					<div class="clear"></div>
+				</div><!-- fin inside -->
+			</section>
+			
+			
 			
 			
 			<section class="section pratical" id="pratical">
